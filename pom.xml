@@ -21,8 +21,9 @@
         <dependency>
             <groupId>tech.xigam</groupId>
             <artifactId>CCH</artifactId>
-            <version>1.1.1</version>
-            <scope>system</scope> <systemPath>${basedir}/libs/Complex Command Handler.jar</systemPath>
+            <version>1.2.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/libs/CCH-1.2.0.jar</systemPath>
         </dependency>
 
         <!-- GSON Config Handler -->

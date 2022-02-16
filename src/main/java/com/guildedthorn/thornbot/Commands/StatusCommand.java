@@ -22,11 +22,14 @@ public class StatusCommand extends Command implements Arguments {
     @Override
     public void execute(Interaction interaction) {
         assert interaction.getMessage() != null;
-        if (interaction.getMessage().getAuthor().getId().equals("654849939175768074")) {
-            OnlineStatus status = OnlineStatus.fromKey(interaction.getArgument("status", String.class));
-            ThornBot.getJDA().getPresence().setStatus(status);
-            interaction.reply(EmbedUtils.defaultEmbed("ThornBot | Status", "Set status to: " + interaction.getArgument("status", String.class)));
+        interaction.setEphemeral(false);
+        if(!interaction.getMember().getId().matches("654849939175768074")) {
+            interaction.reply(EmbedUtils.defaultEmbed("ThornBot | Status", "You cannot set my status!."));
+            return;
         }
+        OnlineStatus status = OnlineStatus.fromKey(interaction.getArgument("status", String.class));
+        ThornBot.getJDA().getPresence().setStatus(status);
+        interaction.reply(EmbedUtils.defaultEmbed("ThornBot | Status", "Set status to: " + interaction.getArgument("status", String.class)));
     }
 
     @Override

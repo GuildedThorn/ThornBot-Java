@@ -8,12 +8,13 @@ import tech.xigam.cch.utils.Interaction;
 public class MachinesCommand extends Command {
     
     public MachinesCommand() {
-        super("machines", "see what machines Thorn is underpaying and what they are used for.");
+        super("machines", "See what machines Thorn is underpaying.");
     }
 
     @Override
     public void execute(Interaction interaction) {
-        interaction.reply(EmbedUtils.defaultEmbedWithThreeFields("ThornBot | Machines", "see what machines Thorn is underpaying and what they are used for.", 
+        interaction.setEphemeral(false);
+        interaction.reply(EmbedUtils.defaultEmbedWithThreeFields("ThornBot | Machines", "See what machines Thorn is underpaying and what they are used for.", 
                 new MessageEmbed.Field("Main PC", """
                         ```
                         CPU: Intel i3-6100 @ 3.70Ghz\s

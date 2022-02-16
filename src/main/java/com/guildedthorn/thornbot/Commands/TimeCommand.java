@@ -1,5 +1,6 @@
 package com.guildedthorn.thornbot.Commands;
 
+import com.guildedthorn.thornbot.Commands.time.CitySubCommand;
 import com.guildedthorn.thornbot.Commands.time.UserSubCommand;
 import tech.xigam.cch.command.Baseless;
 import tech.xigam.cch.command.Command;
@@ -11,6 +12,7 @@ public final class TimeCommand extends Command  implements Baseless {
         super("time", "Find a time in the server by user or city.");
         
         registerSubCommand(new UserSubCommand());
+        registerSubCommand(new CitySubCommand());
     }
 
     public void execute(Interaction interaction) {

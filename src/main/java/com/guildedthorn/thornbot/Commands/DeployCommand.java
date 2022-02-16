@@ -13,6 +13,7 @@ public class DeployCommand extends Command {
 
     @Override
     public void execute(Interaction interaction) {
+        interaction.setEphemeral(false);
         if(!interaction.getMember().getId().matches("654849939175768074")) {
             interaction.reply(EmbedUtils.defaultEmbed("ThornBot | Deploy", "You cannot deploy slash-commands."));
             return;

@@ -8,12 +8,13 @@ import tech.xigam.cch.utils.Interaction;
 public class PortsCommand extends Command {
     
     public PortsCommand() {
-        super("ports", "see what ports thorn is forwarding and what they are used for.");
+        super("ports", "See what ports Thorn is forwarding and what they are used for.");
     }
 
     @Override
     public void execute(Interaction interaction) {
-        interaction.reply(EmbedUtils.defaultEmbedWithField("ThornBot | Ports", "A list of thorn's used ports", 
+        interaction.setEphemeral(false);
+        interaction.reply(EmbedUtils.defaultEmbedWithField("ThornBot | Ports", "A list of Thorn's used ports", 
                 new MessageEmbed.Field("Ports", """
                         ```
                         Kali Linux SSH/SFTP:22\s

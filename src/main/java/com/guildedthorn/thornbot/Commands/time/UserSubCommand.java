@@ -21,7 +21,7 @@ public final class UserSubCommand extends SubCommand implements Arguments {
 
     public Collection<Argument> getArguments() {
         return List.of(
-                Argument.createWithChoices("user", "The user to get the time of.", "user", OptionType.STRING, true, 0, "magix")
+                Argument.createWithChoices("user", "The user to get the time of.", "user", OptionType.STRING, true, 0, "thorn", "magix", "cosmic", "eerie")
         );
     }
 }

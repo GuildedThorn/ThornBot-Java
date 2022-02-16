@@ -15,12 +15,12 @@ public class ThornBot {
     
     public static void main(String[] args)  {
         try {
-            commandHandler.setPrefix(">")
+            commandHandler.setPrefix("tb!")
                     .registerCommand(new DeployCommand())
                     .registerCommand(new StatusCommand())
                     .registerCommand(new PortsCommand())
-                    .registerCommand(new MachinesCommand())
-                    .registerCommand(new TimeCommand());
+                    .registerCommand(new GithubCommand())
+                    .registerCommand(new MachinesCommand());
             jda = JDABuilder.create("", EnumSet.allOf(GatewayIntent.class))
                     .addEventListeners(commandHandler)
                     .setActivity(Activity.watching("Thorn's Apartment"))
